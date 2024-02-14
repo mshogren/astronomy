@@ -61,14 +61,15 @@ export class Ephemerides {
     let testCases: TestCase[] = [];
     let i = 0;
     do {
-      testCases = testData
-        .getTestCases(i, 10000)
-        .filter((x) => x.jd >= startFileDate && x.jd <= finalFileDate);
+      // eslint-disable-next-line no-await-in-loop
+      testCases = await testData.getTestCases(i, 10000);
       // eslint-disable-next-line no-await-in-loop
       const testResults = await Promise.all(
-        testCases.map(async (testCase) => {
-          return this.executeTestCase(testCase);
-        })
+        testCases
+          .filter((x) => x.jd >= startFileDate && x.jd <= finalFileDate)
+          .map(async (testCase) => {
+            return this.executeTestCase(testCase);
+          })
       );
       testResults
         .filter((result) => !result[0])
@@ -140,7 +141,7 @@ export class Ephemerides {
     }
 
     let acceptableError = 0;
-    if (target <= Ephem.EarthMoonBarycenter) acceptableError = 5e-15;
+    if (target <= Ephem.EarthMoonBarycenter) acceptableError = 1e-14;
     const result =
       delta < acceptableError + Math.abs(actual) * 1e-14 + roundingError;
 

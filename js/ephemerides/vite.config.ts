@@ -19,6 +19,11 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       globals: true,
+      poolOptions: {
+        threads: {
+          singleThread: true,
+        },
+      },
     },
     plugins: [
       mode !== 'test' &&

@@ -60,6 +60,7 @@ export default class FileHelper {
     if (this.cache.has(key)) {
       coefficients = this.cache.get(key) ?? [];
     } else {
+      if (this.cache.size > 100) this.cache.clear();
       coefficients = await this.getCoefficientsForInterval(fileName, interval);
       this.cache.set(key, coefficients);
     }

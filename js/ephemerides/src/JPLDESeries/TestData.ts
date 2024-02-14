@@ -1,4 +1,4 @@
-import { getDataFromFile } from './utility';
+import { getPartialDataFromFile } from './utility';
 
 /**
  * A test case provided with the JPL Development Ephemerides data.
@@ -27,7 +27,11 @@ export class TestData {
 
   seriesUrl: string;
 
-  private lines: string[] = [];
+  private headerSize: number = 0;
+
+  private lineSize: number = 0;
+
+  private testDataFileUrl: string = '';
 
   private constructor(id: string, seriesUrl: string) {
     this.id = id;
@@ -42,34 +46,43 @@ export class TestData {
     const testData = new TestData(id, seriesUrl);
 
     const fileName = testDataFileName ?? `testpo.${testData.id}`;
+    testData.testDataFileUrl = `${testData.seriesUrl}/${fileName}`;
 
-    const data = await getDataFromFile(`${testData.seriesUrl}/${fileName}`);
+    const data = await getPartialDataFromFile(
+      testData.testDataFileUrl,
+      0,
+      2000
+    );
+    const lines = data.split(/\n/);
 
-    const dataArray = data.split(/EOT\s+/);
+    const lastHeaderLineIndex = lines.findIndex((x) => x.startsWith('EOT')) + 1;
 
-    testData.lines = dataArray[1].trim().split(/\r?\n/);
+    testData.headerSize =
+      lines.slice(0, lastHeaderLineIndex).join('\n').length + 1;
+    testData.lineSize = lines[lastHeaderLineIndex + 1].length + 1;
 
     return testData;
   }
 
   static parseTestCase(data: string): TestCase {
-    const matches = data.match(/[\w.-]+/g) ?? [];
-    const decimalPlaces = matches[6].length - matches[6].indexOf('.') - 1;
+    const expected = data.substring(34).trim();
+    const decimalPlaces = expected.length - expected.indexOf('.') - 1;
     return {
-      seriesId: matches[0] ?? '',
-      date: matches[1],
-      jd: parseFloat(matches[2]),
-      target: parseInt(matches[3], 10),
-      center: parseInt(matches[4], 10),
-      index: parseInt(matches[5], 10),
-      expected: parseFloat(matches[6]),
+      seriesId: data.substring(0, 3),
+      date: data.substring(3, 15),
+      jd: parseFloat(data.substring(15, 25)),
+      target: parseInt(data.substring(26, 28), 10),
+      center: parseInt(data.substring(29, 31), 10),
+      index: parseInt(data.substring(32, 34), 10),
+      expected: parseFloat(expected),
       roundingError: 5 * 10 ** -decimalPlaces,
     };
   }
 
-  getTestCases(index: number, size: number): TestCase[] {
-    return this.lines
-      .slice(size * index, size * (index + 1))
-      .map(TestData.parseTestCase);
+  async getTestCases(index: number, size: number): Promise<TestCase[]> {
+    const start = this.headerSize + index * size * this.lineSize;
+    const end = start + size * this.lineSize;
+    const data = await getPartialDataFromFile(this.testDataFileUrl, start, end);
+    return data[0] !== '\0' ? data.split(/\n/).map(TestData.parseTestCase) : [];
   }
 }
