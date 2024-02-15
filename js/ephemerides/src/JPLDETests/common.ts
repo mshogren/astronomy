@@ -8,7 +8,9 @@ export default (id: string) => {
       async () => {
         const systemUnderTest = new Ephemerides(id, '../../content/');
         const actual = await systemUnderTest.executeTestCases();
-        expect(actual).toEqual([]);
+        // eslint-disable-next-line no-console
+        console.log(actual.message);
+        expect(actual.failures).toEqual([]);
       },
       { timeout: 600000 }
     );

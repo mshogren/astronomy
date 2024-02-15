@@ -1,3 +1,3 @@
 import executeTests from './common';
 
-executeTests('200')
+executeTests('200');

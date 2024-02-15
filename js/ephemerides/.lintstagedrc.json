@@ -1,5 +1,5 @@
 {
   "*": ["prettier --ignore-unknown --write"],
   "**/*.{js,jsx,ts,tsx}": ["eslint"],
-  "**/*.{ts,tsx}": ["tsc-files -p tsconfig.json --noEmit"]
+  "**/*.{ts,tsx}": ["tsc-files -p js/ephemerides/tsconfig.json --noEmit"]
 }

@@ -2,6 +2,7 @@ import { ItemName } from './JPLDESeries/Item';
 import JulianDate from './JPLDESeries/JulianDate';
 import Series from './JPLDESeries/Series';
 import { TestCase } from './JPLDESeries/TestData';
+import { TestResult, TestSummary } from './JPLDESeries/TestSummary';
 
 export { JulianDate };
 
@@ -51,15 +52,17 @@ export class Ephemerides {
 
   /**
    * Executes all the test cases JPL provided with this development ephemerides series.
-   * @returns An promise that resolves to an array of failed test cases with the actual result.
+   * @returns A promise that resolves to a summary of the test results.
    */
-  async executeTestCases(): Promise<[boolean, number, TestCase][]> {
+  async executeTestCases(): Promise<TestSummary> {
     const series = await this.getSeries();
     const { startFileDate, finalFileDate } = series;
     const testData = await series.getTestData();
-    const results: [boolean, number, TestCase][] = [];
+    const failures: TestResult[] = [];
     let testCases: TestCase[] = [];
     let i = 0;
+    let testCaseCount = 0;
+    let testResultCount = 0;
     do {
       // eslint-disable-next-line no-await-in-loop
       testCases = await testData.getTestCases(i, 10000);
@@ -72,20 +75,13 @@ export class Ephemerides {
           })
       );
       testResults
-        .filter((result) => !result[0])
-        .forEach((testResult) => results.push(testResult));
+        .filter((result) => !result.passed)
+        .forEach((testResult) => failures.push(testResult));
+      testCaseCount += testCases.length;
+      testResultCount += testResults.length;
       i += 1;
     } while (testCases.length > 0);
-    return results;
-    // const testCases = testData
-    //   .getTestCases()
-    //   .filter((x) => x.jd >= startFileDate && x.jd <= finalFileDate);
-    // const results = await Promise.all(
-    //   testCases.map(async (testCase) => {
-    //     return this.executeTestCase(testCase);
-    //   })
-    // );
-    // return results.filter((result) => !result[0]);
+    return new TestSummary(testCaseCount, testResultCount, failures);
   }
 
   /**
@@ -122,9 +118,7 @@ export class Ephemerides {
     return series.getPropertiesForItem(ephem as number as ItemName, julianDate);
   }
 
-  private async executeTestCase(
-    testCase: TestCase
-  ): Promise<[boolean, number, TestCase]> {
+  private async executeTestCase(testCase: TestCase): Promise<TestResult> {
     const series = await this.getSeries();
     const { jd, target, center, index, expected, roundingError } = testCase;
     const propertyIndex = index - 1;
@@ -142,10 +136,10 @@ export class Ephemerides {
 
     let acceptableError = 0;
     if (target <= Ephem.EarthMoonBarycenter) acceptableError = 1e-14;
-    const result =
+    const passed =
       delta < acceptableError + Math.abs(actual) * 1e-14 + roundingError;
 
-    return [result, actual, testCase];
+    return { passed, actual, testCase };
   }
 
   private async getCenter(center: Ephem, julianDate: JulianDate) {
