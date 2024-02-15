@@ -81,3 +81,17 @@ export async function getFileListing(url: string): Promise<Array<string>> {
   const fs = await import('fs/promises');
   return fs.readdir(url);
 }
+
+/**
+ * Gets the length of a file in bytes.
+ * @param url - A relative or absolute file path or url of a file.
+ * @returns A promise that resolves to the length of the file in bytes.
+ */
+export async function getFileSize(url: string): Promise<number> {
+  if (isValidUrl(url)) {
+    const response = await fetch(url, { method: 'HEAD' });
+    return parseInt(response.headers.get('content-length') ?? '0', 10);
+  }
+  const fs = await import('fs/promises');
+  return (await fs.stat(url)).size;
+}

@@ -1,7 +1,8 @@
-import { getFileListing, getPartialDataFromFile } from './utility';
+import { getFileListing, getFileSize, getPartialDataFromFile } from './utility';
 import JulianDate from './JulianDate';
 
 interface FileProperties {
+  finalDate: number;
   intervalSize: number;
   startDate: number;
 }
@@ -46,9 +47,16 @@ export default class FileHelper {
 
     const filesArray = Array.from(fileHelper.files.values());
     fileHelper.startDate = filesArray[0].startDate;
-    fileHelper.finalDate = filesArray.reverse()[0].startDate;
+    fileHelper.finalDate = filesArray.reverse()[0].finalDate;
 
     return fileHelper;
+  }
+
+  private static parseCoefficientData(data: string): RegExpMatchArray | null {
+    return data
+      .trim()
+      .replace(/D/g, 'e')
+      .match(/-?\w+\.\w+[+,-]\w+/gm);
   }
 
   async getCachedCoefficientsForInterval(
@@ -74,14 +82,12 @@ export default class FileHelper {
     const fileProperties = this.files.get(fileName);
     if (!fileProperties)
       throw new Error(`No information found for ${fileName}`);
-    const start = (interval - 1) * fileProperties.intervalSize;
-    const end = interval * fileProperties.intervalSize;
-    const url = `${this.seriesUrl}/${fileName}`;
-    const data = await getPartialDataFromFile(url, start, end);
-    const matches = data
-      .trim()
-      .replace(/D/g, 'e')
-      .match(/-?\w+\.\w+[+,-]\w+/gm);
+    const data = await this.getDataForIntervalFromFile(
+      fileName,
+      interval,
+      fileProperties.intervalSize
+    );
+    const matches = FileHelper.parseCoefficientData(data);
     return matches?.length ? matches.map(parseFloat) : [];
   }
 
@@ -96,6 +102,17 @@ export default class FileHelper {
     return entry[0];
   }
 
+  private async getDataForIntervalFromFile(
+    fileName: string,
+    interval: number,
+    intervalSize: number
+  ): Promise<string> {
+    const url = `${this.seriesUrl}/${fileName}`;
+    const start = (interval - 1) * intervalSize;
+    const end = interval * intervalSize;
+    return getPartialDataFromFile(url, start, end);
+  }
+
   private async getFileListingWithStartDatesAndIntervalSizes(
     fileNames: string[]
   ): Promise<Map<string, FileProperties>> {
@@ -106,7 +123,32 @@ export default class FileHelper {
           .map(async (fileName) => this.getStartDateAndIntervalSize(fileName))
       )
     );
-    return new Map(fileInfos.sort(([, a], [, b]) => a.startDate - b.startDate));
+    fileInfos.sort(([, a], [, b]) => a.startDate - b.startDate);
+    for (let i: number = 0; i < fileInfos.length - 1; i += 1) {
+      fileInfos[i][1].finalDate = fileInfos[i + 1][1].startDate;
+    }
+    const i = fileInfos.length - 1;
+    fileInfos[i][1].finalDate = await this.getFinalDate(
+      fileInfos[i][0],
+      fileInfos[i][1].intervalSize
+    );
+    return new Map(fileInfos);
+  }
+
+  private async getFinalDate(
+    fileName: string,
+    intervalSize: number
+  ): Promise<number> {
+    const url = `${this.seriesUrl}/${fileName}`;
+    const size = await getFileSize(url);
+    const interval = size / intervalSize;
+    const data = await this.getDataForIntervalFromFile(
+      fileName,
+      interval,
+      intervalSize
+    );
+    const matches = FileHelper.parseCoefficientData(data);
+    return matches?.length ? parseFloat(matches[1]) : NaN;
   }
 
   private async getStartDateAndIntervalSize(
@@ -114,18 +156,14 @@ export default class FileHelper {
   ): Promise<[string, FileProperties]> {
     const url = `${this.seriesUrl}/${fileName}`;
     const data = await getPartialDataFromFile(url, 0, sizeToCoverInterval);
-
-    const matches = data
-      .trim()
-      .replace(/D/g, 'e')
-      .match(/-?\w+\.\w+[+,-]\w+/gm);
-
+    const matches = FileHelper.parseCoefficientData(data);
     const intervalDataArray = data.split(/ +2\s+\d/);
     return [
       fileName,
       {
         startDate: matches?.length ? parseFloat(matches[0]) : NaN,
         intervalSize: intervalDataArray[0].length,
+        finalDate: 0,
       },
     ];
   }
