@@ -116,13 +116,14 @@ export default class FileHelper {
   private async getFileListingWithStartDatesAndIntervalSizes(
     fileNames: string[]
   ): Promise<Map<string, FileProperties>> {
-    const fileInfos = await Promise.all(
+    const allFileInfos = await Promise.all(
       Array.from(
         fileNames
           .filter((x) => x.startsWith('asc'))
           .map(async (fileName) => this.getStartDateAndIntervalSize(fileName))
       )
     );
+    const fileInfos = allFileInfos.filter((x) => !Number.isNaN(x[1].startDate));
     fileInfos.sort(([, a], [, b]) => a.startDate - b.startDate);
     for (let i: number = 0; i < fileInfos.length - 1; i += 1) {
       fileInfos[i][1].finalDate = fileInfos[i + 1][1].startDate;

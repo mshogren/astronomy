@@ -69,7 +69,7 @@ export class Ephemerides {
       // eslint-disable-next-line no-await-in-loop
       const testResults = await Promise.all(
         testCases
-          .filter((x) => x.jd >= startFileDate && x.jd <= finalFileDate)
+          .filter((x) => x.jd >= startFileDate && x.jd < finalFileDate)
           .map(async (testCase) => {
             return this.executeTestCase(testCase);
           })

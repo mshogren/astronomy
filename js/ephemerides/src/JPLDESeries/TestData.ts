@@ -83,6 +83,11 @@ export class TestData {
     const start = this.headerSize + index * size * this.lineSize;
     const end = start + size * this.lineSize;
     const data = await getPartialDataFromFile(this.testDataFileUrl, start, end);
-    return data[0] !== '\0' ? data.split(/\n/).map(TestData.parseTestCase) : [];
+    return data[0] !== '\0'
+      ? data
+          .split(/\n/)
+          .filter((x) => x[0] !== '\0')
+          .map(TestData.parseTestCase)
+      : [];
   }
 }
