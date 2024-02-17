@@ -46,7 +46,7 @@ export class TestData {
     const testData = new TestData(id, seriesUrl);
 
     const fileName = testDataFileName ?? `testpo.${testData.id}`;
-    testData.testDataFileUrl = `${testData.seriesUrl}/${fileName}`;
+    testData.testDataFileUrl = `${testData.seriesUrl}${fileName}`;
 
     const data = await getPartialDataFromFile(
       testData.testDataFileUrl,

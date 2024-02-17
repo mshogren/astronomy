@@ -19,7 +19,8 @@
   ],
   "scripts": {
     "dlephem": "wget -r -P content -nH --cut-dirs 4 ftp://ssd.jpl.nasa.gov/pub/eph/planets/ascii/",
-    "prepare": "husky"
+    "prepare": "husky",
+    "testephem": "npm -w js/ephemerides run test -- --run"
   },
   "devDependencies": {
     "@commitlint/cli": "18.6.0",

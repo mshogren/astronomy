@@ -107,7 +107,7 @@ export default class FileHelper {
     interval: number,
     intervalSize: number
   ): Promise<string> {
-    const url = `${this.seriesUrl}/${fileName}`;
+    const url = `${this.seriesUrl}${fileName}`;
     const start = interval * intervalSize;
     const end = start + intervalSize;
     return getPartialDataFromFile(url, start, end);
@@ -140,7 +140,7 @@ export default class FileHelper {
     fileName: string,
     intervalSize: number
   ): Promise<number> {
-    const url = `${this.seriesUrl}/${fileName}`;
+    const url = `${this.seriesUrl}${fileName}`;
     const size = await getFileSize(url);
     const interval = size / intervalSize - 1;
     const data = await this.getDataForIntervalFromFile(
@@ -155,7 +155,7 @@ export default class FileHelper {
   private async getStartDateAndIntervalSize(
     fileName: string
   ): Promise<[string, FileProperties]> {
-    const url = `${this.seriesUrl}/${fileName}`;
+    const url = `${this.seriesUrl}${fileName}`;
     const data = await getPartialDataFromFile(url, 0, sizeToCoverInterval);
     const matches = FileHelper.parseCoefficientData(data);
     const intervalDataArray = data.split(/ +2\s+\d/);
