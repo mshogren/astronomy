@@ -125,8 +125,14 @@ export default class Series {
     const fileName = await fileHelper.getFileForDate(date);
     const fileProperties = fileHelper.files.get(fileName);
     const fileStartDate = fileProperties?.startDate;
-    if (!fileStartDate) throw new Error(`No start date found for ${fileName}`);
-    const interval = date.getInterval(fileStartDate, this.intervalDuration) + 1;
+    const fileFinalDate = fileProperties?.finalDate;
+    if (!fileStartDate || !fileFinalDate)
+      throw new Error(`No start date found for ${fileName}`);
+    const interval = date.getInterval(
+      fileStartDate,
+      fileFinalDate,
+      this.intervalDuration
+    );
     return fileHelper.getCachedCoefficientsForInterval(fileName, interval);
   }
 
@@ -140,7 +146,11 @@ export default class Series {
     const [startDate, finalDate] = coefficientsForDate;
     const intervalDuration = finalDate - startDate;
     const subIntervalDuration = intervalDuration / item.numberOfCoefficientSets;
-    const subInterval = date.getInterval(startDate, subIntervalDuration);
+    const subInterval = date.getInterval(
+      startDate,
+      finalDate,
+      subIntervalDuration
+    );
 
     const t = date.normalize(
       startDate + subIntervalDuration * subInterval,

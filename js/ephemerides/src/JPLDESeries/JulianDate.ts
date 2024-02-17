@@ -27,15 +27,20 @@ export default class JulianDate {
   /**
    * Gets the position of the sub-interval that this julian date is in within
    * the larger interval.
-   * @param intervalStartDate - The start date of the first interval.
+   * @param startDate - The start date of the first interval.
+   * @param finalDate - The final date of the last interval.
    * @param intervalDuration - The duration of each interval.
    * @returns A 0-index number representing the position of the sub-interval
    * this julian date is in within the larger interval.
    */
-  getInterval(intervalStartDate: number, intervalDuration: number): number {
-    return Math.floor(
-      (this.jd - intervalStartDate + this.offset) / intervalDuration
-    );
+  getInterval(
+    startDate: number,
+    finalDate: number,
+    intervalDuration: number
+  ): number {
+    const maxInterval = (finalDate - startDate) / intervalDuration - 1;
+    if (this.jd + this.offset === finalDate) return maxInterval;
+    return Math.floor((this.jd - startDate + this.offset) / intervalDuration);
   }
 
   /**

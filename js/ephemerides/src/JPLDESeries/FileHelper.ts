@@ -108,8 +108,8 @@ export default class FileHelper {
     intervalSize: number
   ): Promise<string> {
     const url = `${this.seriesUrl}/${fileName}`;
-    const start = (interval - 1) * intervalSize;
-    const end = interval * intervalSize;
+    const start = interval * intervalSize;
+    const end = start + intervalSize;
     return getPartialDataFromFile(url, start, end);
   }
 
@@ -142,7 +142,7 @@ export default class FileHelper {
   ): Promise<number> {
     const url = `${this.seriesUrl}/${fileName}`;
     const size = await getFileSize(url);
-    const interval = size / intervalSize;
+    const interval = size / intervalSize - 1;
     const data = await this.getDataForIntervalFromFile(
       fileName,
       interval,
