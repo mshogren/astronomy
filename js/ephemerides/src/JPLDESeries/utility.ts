@@ -57,7 +57,7 @@ export async function getPartialDataFromFile(
   if (isValidUrl(url)) {
     const headers = { Range: `bytes=${start}-${end}` };
     const response = await fetch(url, { headers });
-    return response.text();
+    return response.ok ? response.text() : '';
   }
   const fs = await import('fs/promises');
   const file = await fs.open(url);

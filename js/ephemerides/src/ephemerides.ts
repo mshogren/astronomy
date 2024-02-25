@@ -1,3 +1,36 @@
+/* eslint-disable jsdoc/check-tag-names */
+/**
+ * This module is for calculating ephemeris for planetary bodies using the
+ * [JPL Development Ephemerides](https://ssd.jpl.nasa.gov/planets/eph_export.html) data.
+ * ```ts
+ * const date = new JulianDate(2460316, 0.5);
+ * const ephemerides = new Ephemerides('441', 'https://example.com/data');
+ * const earth = await ephemerides.getEphemeris(Ephem.Earth, date);
+ * ```
+ * If you download all the data for a series including the test cases from the JPL site you can execute the test cases
+ * ```ts
+ * const ephemerides = new Ephemerides('441', './data');
+ * const testSummary = await ephemerides.executeTestCases();
+ * ```
+ * The module has been tested to work in both Node.js processes and in the browser, however there are some caveats.
+ * In a Node.js process it is not strictly necessary to provide a location for the data.
+ * ```
+ * const ephemerides = new Ephemerides('441');
+ * ```
+ * It will attempt to fetch it on the fly from the JPL website.  However this could be very slow if many requests are made.
+ * Instead it is possible to supply the path to the data files in the filesystem.
+ * ```
+ * const ephemerides = new Ephemerides('441', '/path/to/data');
+ * ```
+ * In the browser you must supply a base url for the module to find the data, and that url must allow the requests to fetch the data.
+ * ```
+ * const ephemerides = new Ephemerides('441', 'https://example.com/data');
+ * ```
+ * This is straightforward if the data is hosted the same place as the application reading it,
+ * but requires CORS to be configured correctly if the data is hosted on a different site.
+ * @module
+ */
+/* eslint-enable jsdoc/check-tag-names */
 import { ItemName } from './JPLDESeries/Item';
 import JulianDate from './JPLDESeries/JulianDate';
 import Series from './JPLDESeries/Series';
@@ -51,6 +84,22 @@ export class Ephemerides {
   }
 
   /**
+   * The length of an astronomical unit in kilometers.
+   * @returns The number of kilometers (km) in an astronomical unit (au).
+   */
+  get au(): number {
+    return this.series?.au ?? 149597870.7;
+  }
+
+  /**
+   * The speed of light.
+   * @returns The speed of light in m/s.
+   */
+  get clight(): number {
+    return this.series?.clight ?? 299792458;
+  }
+
+  /**
    * Executes all the test cases JPL provided with this development ephemerides series.
    * @returns A promise that resolves to a summary of the test results.
    */
@@ -90,10 +139,7 @@ export class Ephemerides {
    * @param julianDate - A julian date to calculate the ephemeris for.
    * @returns A promise that resolves to an array of position and velocity coordinates.
    */
-  async getEphemerides(
-    ephem: Ephem,
-    julianDate: JulianDate
-  ): Promise<number[]> {
+  async getEphemeris(ephem: Ephem, julianDate: JulianDate): Promise<number[]> {
     const series = await this.getSeries();
 
     if (ephem === Ephem.Earth) {
@@ -123,7 +169,7 @@ export class Ephemerides {
     const { jd, target, center, index, expected, roundingError } = testCase;
     const propertyIndex = index - 1;
     const julianDate = new JulianDate(jd, 0);
-    const targetProperties = await this.getEphemerides(target, julianDate);
+    const targetProperties = await this.getEphemeris(target, julianDate);
     const centerProperties = await this.getCenter(center, julianDate);
 
     let actual = targetProperties[propertyIndex];
@@ -150,7 +196,7 @@ export class Ephemerides {
     )
       return zeroes;
 
-    return this.getEphemerides(center, julianDate);
+    return this.getEphemeris(center, julianDate);
   }
 
   private async getEarth(julianDate: JulianDate) {

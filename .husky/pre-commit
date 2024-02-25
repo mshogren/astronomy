@@ -1,2 +1,2 @@
 npx lint-staged --shell
-npm run testephem
+npm run test:precommit

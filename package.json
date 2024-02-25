@@ -14,13 +14,13 @@
   "homepage": "https://github.com/mshogren/astronomy#readme",
   "workspaces": [
     "js/ephemerides",
-    "docs",
-    "js/example"
+    "docs"
   ],
   "scripts": {
     "dlephem": "wget -r -P content -nH --cut-dirs 4 ftp://ssd.jpl.nasa.gov/pub/eph/planets/ascii/",
     "prepare": "husky",
-    "testephem": "npm -w js/ephemerides run test -- --run"
+    "test:precommit": "npm run test:precommit --workspaces --if-present",
+    "build:precommit": "npm run build:precommit --workspaces --if-present"
   },
   "devDependencies": {
     "@commitlint/cli": "18.6.0",

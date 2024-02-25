@@ -1,8 +1,9 @@
+ephemerides
+
 # ephemerides
 
 This module is for calculating ephemeris for planetary bodies using the
 [JPL Development Ephemerides](https://ssd.jpl.nasa.gov/planets/eph_export.html) data.
-Full documentation including API document is [here](./docs/README.md)
 
 ```ts
 const date = new JulianDate(2460316, 0.5);
@@ -40,14 +41,13 @@ const ephemerides = new Ephemerides('441', 'https://example.com/data');
 This is straightforward if the data is hosted the same place as the application reading it,
 but requires CORS to be configured correctly if the data is hosted on a different site.
 
-To get all of the ASCII data files you can run
+## Table of contents
 
-```
-wget -r -P . -nH --cut-dirs 4 ftp://ssd.jpl.nasa.gov/pub/eph/planets/ascii/
-```
+### Enumerations
 
-To just get the DE441 series that is currently being used by the [JPL Horizons System](https://ssd.jpl.nasa.gov/horizons/app.html#/) run
+- [Ephem](enums/Ephem.md)
 
-```
-wget -r -P de441 -nH --cut-dirs 5 ftp://ssd.jpl.nasa.gov/pub/eph/planets/ascii/de441
-```
+### Classes
+
+- [Ephemerides](classes/Ephemerides.md)
+- [JulianDate](classes/JulianDate.md)
