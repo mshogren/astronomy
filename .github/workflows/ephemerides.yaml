@@ -55,6 +55,7 @@ jobs:
         with:
           github-token: ${{ secrets.github_token }}
           preset: "conventionalcommits"
+          git-path: "js/ephemerides"
           tag-prefix: "ephemerides@v"
           output-file: "false"
 
