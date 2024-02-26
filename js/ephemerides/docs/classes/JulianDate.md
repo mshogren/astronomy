@@ -42,7 +42,7 @@ Initializes a new instance of the JulianDate class.
 
 #### Defined in
 
-[JPLDESeries/JulianDate.ts:20](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/JPLDESeries/JulianDate.ts#L20)
+[JPLDESeries/JulianDate.ts:20](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/JPLDESeries/JulianDate.ts#L20)
 
 ## Properties
 
@@ -54,7 +54,7 @@ The integer part of the julian date.
 
 #### Defined in
 
-[JPLDESeries/JulianDate.ts:8](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/JPLDESeries/JulianDate.ts#L8)
+[JPLDESeries/JulianDate.ts:8](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/JPLDESeries/JulianDate.ts#L8)
 
 ---
 
@@ -66,7 +66,7 @@ The fractional part of the julian date.
 
 #### Defined in
 
-[JPLDESeries/JulianDate.ts:13](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/JPLDESeries/JulianDate.ts#L13)
+[JPLDESeries/JulianDate.ts:13](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/JPLDESeries/JulianDate.ts#L13)
 
 ## Methods
 
@@ -94,7 +94,7 @@ this julian date is in within the larger interval.
 
 #### Defined in
 
-[JPLDESeries/JulianDate.ts:36](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/JPLDESeries/JulianDate.ts#L36)
+[JPLDESeries/JulianDate.ts:36](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/JPLDESeries/JulianDate.ts#L36)
 
 ---
 
@@ -118,7 +118,7 @@ The number of years from the reference epoch.
 
 #### Defined in
 
-[JPLDESeries/JulianDate.ts:51](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/JPLDESeries/JulianDate.ts#L51)
+[JPLDESeries/JulianDate.ts:51](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/JPLDESeries/JulianDate.ts#L51)
 
 ---
 
@@ -143,4 +143,4 @@ A time normalized between -1 and 1.
 
 #### Defined in
 
-[JPLDESeries/JulianDate.ts:61](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/JPLDESeries/JulianDate.ts#L61)
+[JPLDESeries/JulianDate.ts:61](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/JPLDESeries/JulianDate.ts#L61)

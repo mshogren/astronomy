@@ -2,7 +2,7 @@
 
 This module is for calculating ephemeris for planetary bodies using the
 [JPL Development Ephemerides](https://ssd.jpl.nasa.gov/planets/eph_export.html) data.
-Full documentation including API document is [here](./docs/README.md)
+More information including API documentation is [here](./docs/README.md).
 
 ```ts
 const date = new JulianDate(2460316, 0.5);

@@ -34,7 +34,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:48](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L48)
+[ephemerides.ts:48](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L48)
 
 ---
 
@@ -44,7 +44,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:58](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L58)
+[ephemerides.ts:58](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L58)
 
 ---
 
@@ -54,7 +54,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:50](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L50)
+[ephemerides.ts:50](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L50)
 
 ---
 
@@ -64,7 +64,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:60](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L60)
+[ephemerides.ts:60](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L60)
 
 ---
 
@@ -74,7 +74,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:61](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L61)
+[ephemerides.ts:61](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L61)
 
 ---
 
@@ -84,7 +84,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:49](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L49)
+[ephemerides.ts:49](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L49)
 
 ---
 
@@ -94,7 +94,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:46](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L46)
+[ephemerides.ts:46](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L46)
 
 ---
 
@@ -104,7 +104,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:55](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L55)
+[ephemerides.ts:55](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L55)
 
 ---
 
@@ -114,7 +114,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:53](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L53)
+[ephemerides.ts:53](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L53)
 
 ---
 
@@ -124,7 +124,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:59](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L59)
+[ephemerides.ts:59](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L59)
 
 ---
 
@@ -134,7 +134,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:54](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L54)
+[ephemerides.ts:54](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L54)
 
 ---
 
@@ -144,7 +144,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:51](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L51)
+[ephemerides.ts:51](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L51)
 
 ---
 
@@ -154,7 +154,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:57](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L57)
+[ephemerides.ts:57](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L57)
 
 ---
 
@@ -164,7 +164,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:56](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L56)
+[ephemerides.ts:56](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L56)
 
 ---
 
@@ -174,7 +174,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:62](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L62)
+[ephemerides.ts:62](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L62)
 
 ---
 
@@ -184,7 +184,7 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:52](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L52)
+[ephemerides.ts:52](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L52)
 
 ---
 
@@ -194,4 +194,4 @@ A list of targets to calculate ephemeris for.
 
 #### Defined in
 
-[ephemerides.ts:47](https://github.com/mshogren/astronomy/blob/59a8d01/js/ephemerides/src/ephemerides.ts#L47)
+[ephemerides.ts:47](https://github.com/mshogren/astronomy/blob/6907f2d/js/ephemerides/src/ephemerides.ts#L47)

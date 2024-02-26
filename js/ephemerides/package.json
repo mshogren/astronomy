@@ -16,7 +16,7 @@
     "test:browser": "vitest --run --browser.name=chrome --browser.headless browser.test.ts",
     "posttest:browser": "npm run stop_http",
     "test:precommit": "npm run test -- --run && npm run test:browser",
-    "build:precommit": "typedoc --plugin typedoc-plugin-markdown --readme none src/ephemerides.ts && git add docs"
+    "build:precommit": "typedoc && git add docs"
   },
   "repository": {
     "type": "git",
@@ -54,8 +54,8 @@
     "http-server": "14.1.1",
     "prettier": "3.2.5",
     "tsc-files": "1.1.4",
-    "typedoc": "^0.25.8",
-    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc": "0.25.8",
+    "typedoc-plugin-markdown": "3.17.1",
     "typescript": "5.3.3",
     "vite": "5.1.3",
     "vite-plugin-checker": "0.6.4",
@@ -64,6 +64,6 @@
     "webdriverio": "8.32.2"
   },
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.10"
+    "@xmldom/xmldom": "0.8.10"
   }
 }
