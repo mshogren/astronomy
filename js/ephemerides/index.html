@@ -1,0 +1,17 @@
+<!doctype html>
+
+<head>
+  <script type="module">
+    import { Ephem, Ephemerides, JulianDate } from './dist/ephemerides.js';
+
+    const e = new Ephemerides('test', 'http://localhost:8080/');
+
+    e.getEphemerides(Ephem.Earth, new JulianDate(2460316, 0)).then((x) => {
+      document.getElementById('content').innerText = x.toString();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="content"></div>
+</body>

@@ -1,0 +1,75 @@
+name: ephemerides
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'js/ephemerides/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'js/ephemerides/**'
+
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+  REGISTRY: https://registry.npmjs.org/
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    defaults:
+      run:
+        working-directory: ./js/ephemerides
+
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: ${{ env.REGISTRY }}
+          cache: 'npm'
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: test
+        run: npm run test -- --run
+
+      - name: test:browser
+        run: npm run test:browser
+
+      - name: compile
+        run: npm run build
+
+      - name: Conventional Changelog Action
+        id: changelog
+        if: github.event_name == 'push'
+        uses: TriPSs/conventional-changelog-action@ebc124553a706189378cccb6a34fa836ebff7bc1 # v5
+        with:
+          github-token: ${{ secrets.github_token }}
+          preset: "conventionalcommits"
+          output-file: "false"
+
+      - name: Create Release
+        uses: comnoco/create-release-action@v2.0.5
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: |
+            ${{ steps.changelog.outputs.clean_changelog }}
+
+      - name: publish
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
