@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "dlephem": "wget -r -P content -nH --cut-dirs 4 ftp://ssd.jpl.nasa.gov/pub/eph/planets/ascii/",
-    "prepare": "husky",
+    "prepare": "husky || true",
     "test:precommit": "npm run test:precommit --workspaces --if-present",
     "build:precommit": "npm run build:precommit --workspaces --if-present"
   },
