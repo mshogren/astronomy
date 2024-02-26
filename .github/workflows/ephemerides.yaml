@@ -15,6 +15,7 @@ on:
 env:
   NODE_VERSION: '20'
   REGISTRY: https://registry.npmjs.org/
+  HUSKY: 0
 
 jobs:
   release:
