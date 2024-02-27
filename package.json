@@ -1,6 +1,6 @@
 {
   "name": "astronomy",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A collection of libraries and applications for experimenting with astronomical calculations and algorithms",
   "repository": {
     "type": "git",
