@@ -54,7 +54,7 @@
     "http-server": "14.1.1",
     "prettier": "3.3.2",
     "tsc-files": "1.1.4",
-    "typedoc": "0.26.3",
+    "typedoc": "0.26.4",
     "typedoc-plugin-markdown": "3.17.1",
     "typescript": "5.5.3",
     "vite": "5.3.3",
