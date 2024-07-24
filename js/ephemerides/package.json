@@ -55,7 +55,7 @@
     "prettier": "3.3.3",
     "tsc-files": "1.1.4",
     "typedoc": "0.26.5",
-    "typedoc-plugin-markdown": "3.17.1",
+    "typedoc-plugin-markdown": "4.2.3",
     "typescript": "5.5.4",
     "vite": "5.3.4",
     "vite-plugin-checker": "0.7.2",
