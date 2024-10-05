@@ -39,7 +39,7 @@
       "require": "./dist/ephemerides.umd.cjs"
     }
   },
-  "homepage": "https://github.com/mshogren/astronomy#readme",
+  "homepage": "https://github.com/mshogren/astronomy/tree/main/js/ephemerides#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
