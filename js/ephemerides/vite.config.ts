@@ -18,6 +18,11 @@ export default defineConfig(({ mode }) => {
       },
     },
     test: {
+      browser: {
+        provider: 'webdriverio',
+        name: 'chrome',
+        headless: true,
+      },
       globals: true,
       poolOptions: {
         threads: {

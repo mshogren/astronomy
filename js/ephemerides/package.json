@@ -13,7 +13,7 @@
     "test": "vitest ephemerides.test.ts",
     "test:all": "vitest --run",
     "pretest:browser": "npm run start_http",
-    "test:browser": "vitest --run --browser.name=chrome --browser.headless browser.test.ts",
+    "test:browser": "vitest --run --browser.enabled browser.test.ts",
     "posttest:browser": "npm run stop_http",
     "test:precommit": "npm run test -- --run && npm run test:browser",
     "build:precommit": "typedoc && git add docs"
