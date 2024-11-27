@@ -52,7 +52,7 @@
     "eslint-plugin-jsdoc": "50.6.0",
     "eslint-plugin-prettier": "5.2.1",
     "http-server": "14.1.1",
-    "prettier": "3.3.3",
+    "prettier": "3.4.1",
     "tsc-files": "1.1.4",
     "typedoc": "0.26.11",
     "typedoc-plugin-markdown": "4.2.10",
