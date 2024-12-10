@@ -64,6 +64,6 @@
     "webdriverio": "9.4.1"
   },
   "dependencies": {
-    "@xmldom/xmldom": "0.8.10"
+    "@xmldom/xmldom": "0.9.6"
   }
 }
