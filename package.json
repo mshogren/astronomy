@@ -23,8 +23,8 @@
     "build:precommit": "npm run build:precommit --workspaces --if-present"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
     "husky": "9.0.11",
     "lint-staged": "15.4.3",
     "madr": "3.0.0"
