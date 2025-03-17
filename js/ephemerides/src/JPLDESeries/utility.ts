@@ -10,20 +10,16 @@ function isValidUrl(url: string): boolean {
 async function parseHtmlFileListing(data: string): Promise<Array<string>> {
   const isBrowser = typeof globalThis.window !== 'undefined';
 
-  const parser = isBrowser
-    ? new DOMParser()
-    : new (await import('@xmldom/xmldom')).DOMParser();
-
-  const html = parser.parseFromString(data, 'text/html');
+  const html = isBrowser
+    ? new DOMParser().parseFromString(data, 'text/html')
+    : new (await import('jsdom')).JSDOM(data).window.document;
 
   const anchorElements = Array.from(
-    html.getElementsByTagName('table')[0].getElementsByTagName('a')
+    html.getElementsByTagName('table')[0].getElementsByTagName<'a'>('a')
   );
 
   return anchorElements
-    .map((anchor: Element) =>
-      anchor.attributes.getNamedItem('href')?.value.toString()
-    )
+    .map((anchor: HTMLAnchorElement) => anchor.href?.toString())
     .map((path?: string) => (path ? path.split('/').reverse()[0] : ''));
 }
 

@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
         name: 'ephemerides',
       },
       rollupOptions: {
-        external: ['@xmldom/xmldom', ...builtinModules],
+        external: ['jsdom', ...builtinModules],
       },
     },
     test: {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "adr-log  -i -e adr-template.md"
+    "build": "cd decisions; adr-log  -i -e adr-template.md"
   },
   "repository": {
     "type": "git",
