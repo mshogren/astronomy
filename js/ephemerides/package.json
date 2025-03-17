@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/mshogren/astronomy/tree/main/js/ephemerides#readme",
   "devDependencies": {
-    "@types/jsdom": "^21.1.7",
+    "@types/jsdom": "21.1.7",
     "@typescript-eslint/eslint-plugin": "8.26.1",
     "@typescript-eslint/parser": "8.26.1",
     "@vitest/browser": "2.1.9",
