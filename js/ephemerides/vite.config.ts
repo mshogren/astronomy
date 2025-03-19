@@ -20,8 +20,12 @@ export default defineConfig(({ mode }) => {
     test: {
       browser: {
         provider: 'webdriverio',
-        name: 'chrome',
         headless: true,
+        instances: [
+          {
+            browser: 'chrome',
+          },
+        ],
       },
       globals: true,
       poolOptions: {
