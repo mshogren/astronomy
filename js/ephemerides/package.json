@@ -62,7 +62,7 @@
     "vite-plugin-checker": "0.10.1",
     "vite-plugin-dts": "4.5.4",
     "vitest": "3.2.4",
-    "webdriverio": "9.18.1"
+    "webdriverio": "9.18.3"
   },
   "dependencies": {
     "jsdom": "26.1.0"
