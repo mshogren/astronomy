@@ -59,7 +59,7 @@
     "typedoc-plugin-markdown": "4.7.1",
     "typescript": "5.8.3",
     "vite": "6.3.5",
-    "vite-plugin-checker": "0.10.1",
+    "vite-plugin-checker": "0.10.2",
     "vite-plugin-dts": "4.5.4",
     "vitest": "3.2.4",
     "webdriverio": "9.18.4"
