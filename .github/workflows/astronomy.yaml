@@ -37,7 +37,7 @@ jobs:
         run: npm -w js/astronomy ci
         
       - name: install epehemerides
-        run npm -w js/astronomy install ephemerides
+        run: npm -w js/astronomy install ephemerides
 
       - name: test
         run: npm -w js/astronomy run test -- --run
