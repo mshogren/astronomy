@@ -119,11 +119,10 @@ export default class Series {
   }
 
   async getCoefficientsForDate(date: JulianDate): Promise<number[]> {
-    const { fileHelper } = this;
-    if (!fileHelper)
+    if (!this.fileHelper)
       throw new Error(`Series ${this.name} not fully initialized`);
-    const fileName = await fileHelper.getFileForDate(date);
-    const fileProperties = fileHelper.files.get(fileName);
+    const fileName = await this.fileHelper.getFileForDate(date);
+    const fileProperties = this.fileHelper.files.get(fileName);
     const fileStartDate = fileProperties?.startDate;
     const fileFinalDate = fileProperties?.finalDate;
     if (!fileStartDate || !fileFinalDate)
@@ -133,7 +132,7 @@ export default class Series {
       fileFinalDate,
       this.intervalDuration
     );
-    return fileHelper.getCachedCoefficientsForInterval(fileName, interval);
+    return this.fileHelper.getCachedCoefficientsForInterval(fileName, interval);
   }
 
   async getPropertiesForItem(
@@ -143,7 +142,8 @@ export default class Series {
     const coefficientsForDate = await this.getCoefficientsForDate(date);
     const item = this.items.get(itemName);
     if (!item) throw new Error(`${itemName}`);
-    const [startDate, finalDate] = coefficientsForDate;
+    const startDate = coefficientsForDate[0];
+    const finalDate = coefficientsForDate[1];
     const intervalDuration = finalDate - startDate;
     const subIntervalDuration = intervalDuration / item.numberOfCoefficientSets;
     const subInterval = date.getInterval(

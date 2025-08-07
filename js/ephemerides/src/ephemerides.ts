@@ -109,7 +109,6 @@ export class Ephemerides {
    */
   async executeTestCases(): Promise<TestSummary> {
     const series = await this.getSeries();
-    const { startFileDate, finalFileDate } = series;
     const testData = await series.getTestData();
     const failures: TestResult[] = [];
     let testCases: TestCase[] = [];
@@ -122,7 +121,9 @@ export class Ephemerides {
       // eslint-disable-next-line no-await-in-loop
       const testResults = await Promise.all(
         testCases
-          .filter((x) => x.jd >= startFileDate && x.jd <= finalFileDate)
+          .filter(
+            (x) => x.jd >= series.startFileDate && x.jd <= series.finalFileDate
+          )
           .map(async (testCase) => {
             return this.executeTestCase(testCase);
           })
@@ -170,24 +171,27 @@ export class Ephemerides {
 
   private async executeTestCase(testCase: TestCase): Promise<TestResult> {
     const series = await this.getSeries();
-    const { jd, target, center, index, expected, roundingError } = testCase;
-    const propertyIndex = index - 1;
-    const julianDate = new JulianDate(jd, 0);
-    const targetProperties = await this.getEphemeris(target, julianDate);
-    const centerProperties = await this.getCenter(center, julianDate);
+    const propertyIndex = testCase.index - 1;
+    const julianDate = new JulianDate(testCase.jd, 0);
+    const targetProperties = await this.getEphemeris(
+      testCase.target,
+      julianDate
+    );
+    const centerProperties = await this.getCenter(testCase.center, julianDate);
 
     let actual = targetProperties[propertyIndex];
-    if (target <= Ephem.EarthMoonBarycenter)
+    if (testCase.target <= Ephem.EarthMoonBarycenter)
       actual = (actual - centerProperties[propertyIndex]) / series.au;
-    let delta = Math.abs(actual - expected);
-    if (target === Ephem.Librations && index >= 3) {
+    let delta = Math.abs(actual - testCase.expected);
+    if (testCase.target === Ephem.Librations && testCase.index >= 3) {
       delta /= 1 + 100 * julianDate.getYearsFromEpoch(series.jdepoc);
     }
 
     let acceptableError = 0;
-    if (target <= Ephem.EarthMoonBarycenter) acceptableError = 1e-14;
+    if (testCase.target <= Ephem.EarthMoonBarycenter) acceptableError = 1e-14;
     const passed =
-      delta < acceptableError + Math.abs(actual) * 1e-14 + roundingError;
+      delta <
+      acceptableError + Math.abs(actual) * 1e-14 + testCase.roundingError;
 
     return { passed, actual, testCase };
   }
