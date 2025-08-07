@@ -32,6 +32,12 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           registry-url: ${{ env.REGISTRY }}
           cache: 'npm'
+          
+      - name: install ephemerides dependencies
+        run: npm -w js/ephemerides ci
+
+      - name: build ephemerides
+        run: npm -w js/ephemerides run build
 
       - name: install dependencies
         run: npm -w js/astronomy ci

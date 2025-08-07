@@ -5,9 +5,6 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": false,
-    "paths": {
-      "ephemerides": ["../ephemerides/src"]
-    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -22,6 +19,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src"],
-  "references": [{ "path": "../ephemerides/" }]
+  "include": ["./src"]
 }
