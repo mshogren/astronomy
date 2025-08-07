@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/mshogren/astronomy#readme",
   "workspaces": [
+    "js/astronomy",
     "js/ephemerides",
     "docs"
   ],

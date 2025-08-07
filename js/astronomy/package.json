@@ -1,0 +1,65 @@
+{
+  "name": "astronomy",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start_http": "http-server ../../content --cors &",
+    "stop_http": "pkill --signal SIGINT http-server",
+    "predev": "npm run start_http",
+    "dev": "vite",
+    "postdev": "npm run stop_http",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "test:precommit": "npm run test -- --run",
+    "build:precommit": "typedoc && git add docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mshogren/astronomy.git"
+  },
+  "author": "mshogren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mshogren/astronomy/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/astronomy.umd.cjs",
+  "module": "./dist/astronomy.js",
+  "types": "./dist/astronomy.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/astronomy.js",
+      "require": "./dist/astronomy.umd.cjs"
+    }
+  },
+  "homepage": "https://github.com/mshogren/astronomy/tree/main/js/astronomy#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "8.39.0",
+    "@typescript-eslint/parser": "8.39.0",
+    "@vitest/browser": "3.2.4",
+    "eslint": "8.57.1",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-import-resolver-typescript": "4.4.4",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-jsdoc": "50.8.0",
+    "eslint-plugin-prettier": "5.5.3",
+    "http-server": "14.1.1",
+    "prettier": "3.6.2",
+    "tsc-files": "1.1.4",
+    "typedoc": "0.28.9",
+    "typedoc-plugin-markdown": "4.8.0",
+    "typescript": "5.9.2",
+    "vite": "7.0.6",
+    "vite-plugin-checker": "0.10.2",
+    "vite-plugin-dts": "4.5.4",
+    "vitest": "3.2.4",
+    "webdriverio": "9.18.4"
+  },
+  "dependencies": {
+    "@tsastro/tsofa": "18.1.0"
+  }
+}

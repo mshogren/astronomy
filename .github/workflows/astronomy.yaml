@@ -1,0 +1,73 @@
+name: astronomy 
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'js/astronomy/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'js/astronomy/**'
+
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+  REGISTRY: https://registry.npmjs.org/
+  HUSKY: 0
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: ${{ env.REGISTRY }}
+          cache: 'npm'
+
+      - name: install dependencies
+        run: npm -w js/astronomy ci
+
+      - name: test
+        run: npm -w js/astronomy run test -- --run
+
+      - name: compile
+        run: npm -w js/astronomy run build
+
+      - name: Conventional Changelog Action
+        id: changelog
+        if: github.event_name == 'push'
+        uses: TriPSs/conventional-changelog-action@67139193614f5b9e8db87da1bd4240922b34d765 # v6
+        with:
+          github-token: ${{ secrets.github_token }}
+          preset: "conventionalcommits"
+          git-path: "js/astronomy"
+          tag-prefix: "astronomy@v"
+          version-file: "js/astronomy/package.json"
+          output-file: "false"
+
+      - name: Create Release
+        uses: comnoco/create-release-action@7dea6dc82ac9d97ced7a764aa82811451bba80e0 # v2.0.5
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: |
+            ${{ steps.changelog.outputs.clean_changelog }}
+
+      - name: publish
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        run: npm -w js/astronomy publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+

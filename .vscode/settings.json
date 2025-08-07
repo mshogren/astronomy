@@ -13,5 +13,9 @@
         "Librations",
         "Meeus",
         "VSOP"
+    ],
+    "conventionalCommits.scopes": [
+        "ephem",
+        "astro",
     ]
 }
