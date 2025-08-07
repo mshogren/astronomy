@@ -30,5 +30,10 @@ export default defineConfig(({ mode }) => {
         }),
       dts({ rollupTypes: true }),
     ],
+    resolve: {
+      alias: {
+        ephemerides: resolve(__dirname, '../ephemerides/src/ephemerides.ts'),
+      },
+    },
   } as UserConfig;
 });

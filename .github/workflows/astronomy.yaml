@@ -36,12 +36,12 @@ jobs:
       - name: install dependencies
         run: npm -w js/astronomy ci
         
-      - name: compile
-        run: npm -w js/astronomy run build
-        
       - name: test
         run: npm -w js/astronomy run test -- --run
 
+      - name: compile
+        run: npm -w js/astronomy run build
+        
       - name: Conventional Changelog Action
         id: changelog
         if: github.event_name == 'push'
