@@ -1,10 +1,12 @@
-[**ephemerides**](../README.md) • **Docs**
+[**ephemerides**](../README.md)
 
 ---
 
 [ephemerides](../README.md) / Ephem
 
 # Enumeration: Ephem
+
+Defined in: [ephemerides.ts:49](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L49)
 
 A list of targets to calculate ephemeris for.
 
@@ -14,9 +16,7 @@ A list of targets to calculate ephemeris for.
 
 > **Earth**: `3`
 
-#### Defined in
-
-[ephemerides.ts:52](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L52)
+Defined in: [ephemerides.ts:52](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L52)
 
 ---
 
@@ -24,9 +24,7 @@ A list of targets to calculate ephemeris for.
 
 > **EarthMoonBarycenter**: `13`
 
-#### Defined in
-
-[ephemerides.ts:62](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L62)
+Defined in: [ephemerides.ts:62](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L62)
 
 ---
 
@@ -34,9 +32,7 @@ A list of targets to calculate ephemeris for.
 
 > **Jupiter**: `5`
 
-#### Defined in
-
-[ephemerides.ts:54](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L54)
+Defined in: [ephemerides.ts:54](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L54)
 
 ---
 
@@ -44,9 +40,7 @@ A list of targets to calculate ephemeris for.
 
 > **Librations**: `15`
 
-#### Defined in
-
-[ephemerides.ts:64](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L64)
+Defined in: [ephemerides.ts:64](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L64)
 
 ---
 
@@ -54,9 +48,7 @@ A list of targets to calculate ephemeris for.
 
 > **Mantle**: `16`
 
-#### Defined in
-
-[ephemerides.ts:65](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L65)
+Defined in: [ephemerides.ts:65](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L65)
 
 ---
 
@@ -64,9 +56,7 @@ A list of targets to calculate ephemeris for.
 
 > **Mars**: `4`
 
-#### Defined in
-
-[ephemerides.ts:53](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L53)
+Defined in: [ephemerides.ts:53](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L53)
 
 ---
 
@@ -74,9 +64,7 @@ A list of targets to calculate ephemeris for.
 
 > **Mercury**: `1`
 
-#### Defined in
-
-[ephemerides.ts:50](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L50)
+Defined in: [ephemerides.ts:50](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L50)
 
 ---
 
@@ -84,9 +72,7 @@ A list of targets to calculate ephemeris for.
 
 > **Moon**: `10`
 
-#### Defined in
-
-[ephemerides.ts:59](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L59)
+Defined in: [ephemerides.ts:59](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L59)
 
 ---
 
@@ -94,9 +80,7 @@ A list of targets to calculate ephemeris for.
 
 > **Neptune**: `8`
 
-#### Defined in
-
-[ephemerides.ts:57](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L57)
+Defined in: [ephemerides.ts:57](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L57)
 
 ---
 
@@ -104,9 +88,7 @@ A list of targets to calculate ephemeris for.
 
 > **Nutations**: `14`
 
-#### Defined in
-
-[ephemerides.ts:63](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L63)
+Defined in: [ephemerides.ts:63](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L63)
 
 ---
 
@@ -114,9 +96,7 @@ A list of targets to calculate ephemeris for.
 
 > **Pluto**: `9`
 
-#### Defined in
-
-[ephemerides.ts:58](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L58)
+Defined in: [ephemerides.ts:58](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L58)
 
 ---
 
@@ -124,9 +104,7 @@ A list of targets to calculate ephemeris for.
 
 > **Saturn**: `6`
 
-#### Defined in
-
-[ephemerides.ts:55](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L55)
+Defined in: [ephemerides.ts:55](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L55)
 
 ---
 
@@ -134,9 +112,7 @@ A list of targets to calculate ephemeris for.
 
 > **SolarSystemBarycenter**: `12`
 
-#### Defined in
-
-[ephemerides.ts:61](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L61)
+Defined in: [ephemerides.ts:61](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L61)
 
 ---
 
@@ -144,9 +120,7 @@ A list of targets to calculate ephemeris for.
 
 > **Sun**: `11`
 
-#### Defined in
-
-[ephemerides.ts:60](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L60)
+Defined in: [ephemerides.ts:60](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L60)
 
 ---
 
@@ -154,9 +128,7 @@ A list of targets to calculate ephemeris for.
 
 > **TTTDB**: `17`
 
-#### Defined in
-
-[ephemerides.ts:66](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L66)
+Defined in: [ephemerides.ts:66](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L66)
 
 ---
 
@@ -164,9 +136,7 @@ A list of targets to calculate ephemeris for.
 
 > **Uranus**: `7`
 
-#### Defined in
-
-[ephemerides.ts:56](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L56)
+Defined in: [ephemerides.ts:56](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L56)
 
 ---
 
@@ -174,6 +144,4 @@ A list of targets to calculate ephemeris for.
 
 > **Venus**: `2`
 
-#### Defined in
-
-[ephemerides.ts:51](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L51)
+Defined in: [ephemerides.ts:51](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L51)
