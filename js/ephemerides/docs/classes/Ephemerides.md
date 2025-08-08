@@ -1,4 +1,4 @@
-[**ephemerides**](../README.md) • **Docs**
+[**ephemerides**](../README.md)
 
 ---
 
@@ -6,75 +6,81 @@
 
 # Class: Ephemerides
 
+Defined in: [ephemerides.ts:74](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L74)
+
 This class implements methods to calculate ephemeris for planetary and solar system phenomena.
 
 ## Constructors
 
-### new Ephemerides()
+### Constructor
 
-> **new Ephemerides**(`id`, `baseUrl`?): [`Ephemerides`](Ephemerides.md)
+> **new Ephemerides**(`id`, `baseUrl?`): `Ephemerides`
+
+Defined in: [ephemerides.ts:82](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L82)
 
 Initializes a new instance of the Ephemerides class.
 
 #### Parameters
 
-• **id**: `string`
+##### id
+
+`string`
 
 The identifier of the JPL DE series to use - for example 441.
 
-• **baseUrl?**: `string`
+##### baseUrl?
+
+`string`
 
 The location of the JPL Development Ephemerides data files.
 
 #### Returns
 
-[`Ephemerides`](Ephemerides.md)
-
-#### Defined in
-
-[ephemerides.ts:82](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L82)
+`Ephemerides`
 
 ## Accessors
 
 ### au
 
-> `get` **au**(): `number`
+#### Get Signature
+
+> **get** **au**(): `number`
+
+Defined in: [ephemerides.ts:94](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L94)
 
 The length of an astronomical unit in kilometers.
 
-#### Returns
+##### Returns
 
 `number`
 
 The number of kilometers (km) in an astronomical unit (au).
 
-#### Defined in
-
-[ephemerides.ts:94](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L94)
-
 ---
 
 ### clight
 
-> `get` **clight**(): `number`
+#### Get Signature
+
+> **get** **clight**(): `number`
+
+Defined in: [ephemerides.ts:102](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L102)
 
 The speed of light.
 
-#### Returns
+##### Returns
 
 `number`
 
 The speed of light in m/s.
-
-#### Defined in
-
-[ephemerides.ts:102](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L102)
 
 ## Methods
 
 ### executeTestCases()
 
 > **executeTestCases**(): `Promise`\<`TestSummary`\>
+
+Defined in: [ephemerides.ts:110](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L110)
 
 Executes all the test cases JPL provided with this development ephemerides series.
 
@@ -84,25 +90,27 @@ Executes all the test cases JPL provided with this development ephemerides serie
 
 A promise that resolves to a summary of the test results.
 
-#### Defined in
-
-[ephemerides.ts:110](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L110)
-
 ---
 
 ### getEphemeris()
 
 > **getEphemeris**(`ephem`, `julianDate`): `Promise`\<`number`[]\>
 
+Defined in: [ephemerides.ts:147](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L147)
+
 Calculate ephemeris for planetary and solar system phenomena.
 
 #### Parameters
 
-• **ephem**: [`Ephem`](../enumerations/Ephem.md)
+##### ephem
+
+[`Ephem`](../enumerations/Ephem.md)
 
 A target to calculate ephemeris for.
 
-• **julianDate**: [`JulianDate`](JulianDate.md)
+##### julianDate
+
+[`JulianDate`](JulianDate.md)
 
 A julian date to calculate the ephemeris for.
 
@@ -111,7 +119,3 @@ A julian date to calculate the ephemeris for.
 `Promise`\<`number`[]\>
 
 A promise that resolves to an array of position and velocity coordinates.
-
-#### Defined in
-
-[ephemerides.ts:146](https://github.com/mshogren/astronomy/blob/3ddd8bb18c6e65bf5067df1c2b52ff8afd2db9b1/js/ephemerides/src/ephemerides.ts#L146)

@@ -6,7 +6,7 @@
 
 # Class: Place
 
-Defined in: [Place.ts:5](https://github.com/mshogren/astronomy/blob/e51d661eb851ca3e12259e0dbb61e540aea76c6a/js/astronomy/src/Place.ts#L5)
+Defined in: [Place.ts:5](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/Place.ts#L5)
 
 This class defines a structure for accessing position and velocity coordinates of a place.
 
@@ -16,7 +16,7 @@ This class defines a structure for accessing position and velocity coordinates o
 
 > **new Place**(`place`): `Place`
 
-Defined in: [Place.ts:20](https://github.com/mshogren/astronomy/blob/e51d661eb851ca3e12259e0dbb61e540aea76c6a/js/astronomy/src/Place.ts#L20)
+Defined in: [Place.ts:20](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/Place.ts#L20)
 
 Initializes a new instance of the Place class.
 
@@ -38,7 +38,7 @@ An array of position a velocity coordinates.
 
 > **position**: `number`[]
 
-Defined in: [Place.ts:9](https://github.com/mshogren/astronomy/blob/e51d661eb851ca3e12259e0dbb61e540aea76c6a/js/astronomy/src/Place.ts#L9)
+Defined in: [Place.ts:9](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/Place.ts#L9)
 
 The array pf position coordinates.
 
@@ -48,6 +48,6 @@ The array pf position coordinates.
 
 > **velocity**: `number`[]
 
-Defined in: [Place.ts:14](https://github.com/mshogren/astronomy/blob/e51d661eb851ca3e12259e0dbb61e540aea76c6a/js/astronomy/src/Place.ts#L14)
+Defined in: [Place.ts:14](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/Place.ts#L14)
 
 The array of velocity coordinates.

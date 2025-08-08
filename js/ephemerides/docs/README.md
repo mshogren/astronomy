@@ -1,4 +1,4 @@
-**ephemerides** • **Docs**
+**ephemerides**
 
 ---
 
