@@ -28,6 +28,6 @@
     "@commitlint/config-conventional": "19.8.1",
     "husky": "9.0.11",
     "lint-staged": "16.1.4",
-    "madr": "3.0.0"
+    "madr": "4.0.0"
   }
 }
