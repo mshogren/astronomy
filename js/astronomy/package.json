@@ -57,7 +57,7 @@
     "vite-plugin-checker": "0.10.3",
     "vite-plugin-dts": "4.5.4",
     "vitest": "3.2.4",
-    "webdriverio": "9.19.2"
+    "webdriverio": "9.20.0"
   },
   "dependencies": {
     "@tsastro/tsofa": "18.1.0",
