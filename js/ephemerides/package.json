@@ -65,6 +65,6 @@
     "webdriverio": "9.20.0"
   },
   "dependencies": {
-    "jsdom": "27.0.1"
+    "jsdom": "27.1.0"
   }
 }
