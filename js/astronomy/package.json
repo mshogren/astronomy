@@ -39,7 +39,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "8.46.4",
     "@typescript-eslint/parser": "8.46.4",
-    "@vitest/browser": "3.2.4",
+    "@vitest/browser": "4.0.9",
     "eslint": "8.57.1",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "10.1.8",
@@ -56,7 +56,7 @@
     "vite": "7.2.2",
     "vite-plugin-checker": "0.11.0",
     "vite-plugin-dts": "4.5.4",
-    "vitest": "3.2.4",
+    "vitest": "4.0.9",
     "webdriverio": "9.20.0"
   },
   "dependencies": {
