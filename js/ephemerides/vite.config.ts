@@ -2,6 +2,7 @@
 import { builtinModules } from 'module';
 import { resolve } from 'path';
 import { defineConfig, UserConfig } from 'vite';
+import { webdriverio } from '@vitest/browser-webdriverio';
 import checker from 'vite-plugin-checker';
 import dts from 'vite-plugin-dts';
 
@@ -19,7 +20,7 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       browser: {
-        provider: 'webdriverio',
+        provider: webdriverio(),
         headless: true,
         instances: [
           {
