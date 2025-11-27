@@ -1,4 +1,3 @@
-// eslint-disable-next-line max-classes-per-file
 export enum ItemName {
   Mercury = 1,
   Venus = 2,

@@ -26,7 +26,6 @@ export { Place };
 /**
  * This class implements miscellaneous methods to calculate planetary and solar system phenomena.
  */
-// eslint-disable-next-line import/prefer-default-export
 export class Astronomy {
   private clight: number;
 
@@ -92,6 +91,9 @@ export class Astronomy {
     );
 
     return new Place(targetPosition.concat(target.velocity));
+
+    // const abberation = this.getAbberation(target.position, earth.velocity);
+    // return new Place(TSOFA.jauPpp(target.position, abberation).concat(target.velocity))
   }
 
   /**
