@@ -1,7 +1,6 @@
 /**
  * This class defines a structure for accessing position and velocity coordinates of a place.
  */
-// eslint-disable-next-line import/prefer-default-export
 export class Place {
   /**
    * The array pf position coordinates.

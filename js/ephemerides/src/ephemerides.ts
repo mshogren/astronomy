@@ -116,9 +116,7 @@ export class Ephemerides {
     let testCaseCount = 0;
     let testResultCount = 0;
     do {
-      // eslint-disable-next-line no-await-in-loop
       testCases = await testData.getTestCases(i, 10000);
-      // eslint-disable-next-line no-await-in-loop
       const testResults = await Promise.all(
         testCases
           .filter(
