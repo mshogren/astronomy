@@ -6,7 +6,7 @@
 
 # Class: JulianDate
 
-Defined in: [JPLDESeries/JulianDate.ts:4](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/JPLDESeries/JulianDate.ts#L4)
+Defined in: [JPLDESeries/JulianDate.ts:4](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/JPLDESeries/JulianDate.ts#L4)
 
 This class implements methods and properties related to julian dates.
 
@@ -16,7 +16,7 @@ This class implements methods and properties related to julian dates.
 
 > **new JulianDate**(`jd`, `offset`): `JulianDate`
 
-Defined in: [JPLDESeries/JulianDate.ts:20](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/JPLDESeries/JulianDate.ts#L20)
+Defined in: [JPLDESeries/JulianDate.ts:20](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/JPLDESeries/JulianDate.ts#L20)
 
 Initializes a new instance of the JulianDate class.
 
@@ -44,7 +44,7 @@ The fractional part of the julian date.
 
 > **jd**: `number`
 
-Defined in: [JPLDESeries/JulianDate.ts:8](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/JPLDESeries/JulianDate.ts#L8)
+Defined in: [JPLDESeries/JulianDate.ts:8](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/JPLDESeries/JulianDate.ts#L8)
 
 The integer part of the julian date.
 
@@ -54,7 +54,7 @@ The integer part of the julian date.
 
 > **offset**: `number`
 
-Defined in: [JPLDESeries/JulianDate.ts:13](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/JPLDESeries/JulianDate.ts#L13)
+Defined in: [JPLDESeries/JulianDate.ts:13](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/JPLDESeries/JulianDate.ts#L13)
 
 The fractional part of the julian date.
 
@@ -64,7 +64,7 @@ The fractional part of the julian date.
 
 > **getInterval**(`startDate`, `finalDate`, `intervalDuration`): `number`
 
-Defined in: [JPLDESeries/JulianDate.ts:36](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/JPLDESeries/JulianDate.ts#L36)
+Defined in: [JPLDESeries/JulianDate.ts:36](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/JPLDESeries/JulianDate.ts#L36)
 
 Gets the position of the sub-interval that this julian date is in within
 the larger interval.
@@ -102,7 +102,7 @@ this julian date is in within the larger interval.
 
 > **getYearsFromEpoch**(`jdepoc`): `number`
 
-Defined in: [JPLDESeries/JulianDate.ts:51](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/JPLDESeries/JulianDate.ts#L51)
+Defined in: [JPLDESeries/JulianDate.ts:51](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/JPLDESeries/JulianDate.ts#L51)
 
 Gets the number of years this date is from the reference epoch.
 
@@ -126,7 +126,7 @@ The number of years from the reference epoch.
 
 > **normalize**(`intervalStartDate`, `intervalDuration`): `number`
 
-Defined in: [JPLDESeries/JulianDate.ts:61](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/JPLDESeries/JulianDate.ts#L61)
+Defined in: [JPLDESeries/JulianDate.ts:61](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/JPLDESeries/JulianDate.ts#L61)
 
 Normalize time variable to be in the range -1 to 1 over the given interval.
 

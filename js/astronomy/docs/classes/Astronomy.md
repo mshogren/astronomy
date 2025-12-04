@@ -6,7 +6,7 @@
 
 # Class: Astronomy
 
-Defined in: [astronomy.ts:30](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L30)
+Defined in: [astronomy.ts:29](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L29)
 
 This class implements miscellaneous methods to calculate planetary and solar system phenomena.
 
@@ -16,7 +16,7 @@ This class implements miscellaneous methods to calculate planetary and solar sys
 
 > **new Astronomy**(`ephem`): `Astronomy`
 
-Defined in: [astronomy.ts:41](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L41)
+Defined in: [astronomy.ts:40](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L40)
 
 Initializes a new instance of the Ephemerides class.
 
@@ -38,7 +38,7 @@ The implementation of JPL Development Ephemerides to use.
 
 > **getAbberation**(`targetPosition`, `earthVelocity`): `number`[]
 
-Defined in: [astronomy.ts:47](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L47)
+Defined in: [astronomy.ts:46](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L46)
 
 #### Parameters
 
@@ -60,7 +60,7 @@ Defined in: [astronomy.ts:47](https://github.com/mshogren/astronomy/blob/8aeb798
 
 > **getAbberationCorrectedPosition**(`targetPosition`, `earthVelocity`): `number`[]
 
-Defined in: [astronomy.ts:75](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L75)
+Defined in: [astronomy.ts:74](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L74)
 
 Calculate the abberation corrected position of a target.
 This implementation follows the method used by the
@@ -92,7 +92,7 @@ An array of position coordinates.
 
 > **getApparentPlace**(`body`, `julianDate`): `Promise`\<[`Place`](Place.md)\>
 
-Defined in: [astronomy.ts:105](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L105)
+Defined in: [astronomy.ts:104](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L104)
 
 Calculate the geocentric position of a solar system body corrected for light-time and abberation.
 
@@ -122,7 +122,7 @@ A promise that resolves to a Place.
 
 > **getAstrometricPlace**(`body`, `julianDate`, `previousDate?`, `originalDate?`): `Promise`\<[`Place`](Place.md)\>
 
-Defined in: [astronomy.ts:128](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L128)
+Defined in: [astronomy.ts:127](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L127)
 
 Calculate the astrometric position of a solar system body corrected for light-time by interpolating.
 
@@ -164,7 +164,7 @@ A promise that resolves to a Place.
 
 > **getEphemeris**(`body`, `julianDate`): `Promise`\<[`Place`](Place.md)\>
 
-Defined in: [astronomy.ts:162](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L162)
+Defined in: [astronomy.ts:161](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L161)
 
 Calculate ephemeris for planetary and solar system phenomena.
 
@@ -194,7 +194,7 @@ A promise that resolves to a Place.
 
 > **getGeometricPlace**(`body`, `julianDate`): `Promise`\<[`Place`](Place.md)\>
 
-Defined in: [astronomy.ts:175](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/astronomy/src/astronomy.ts#L175)
+Defined in: [astronomy.ts:174](https://github.com/mshogren/astronomy/blob/main/js/astronomy/src/astronomy.ts#L174)
 
 Calculate the geometric geocentric position of a solar system body.
 

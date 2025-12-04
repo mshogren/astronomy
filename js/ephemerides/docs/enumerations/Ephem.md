@@ -6,7 +6,7 @@
 
 # Enumeration: Ephem
 
-Defined in: [ephemerides.ts:49](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L49)
+Defined in: [ephemerides.ts:49](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L49)
 
 A list of targets to calculate ephemeris for.
 
@@ -16,7 +16,7 @@ A list of targets to calculate ephemeris for.
 
 > **Earth**: `3`
 
-Defined in: [ephemerides.ts:52](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L52)
+Defined in: [ephemerides.ts:52](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L52)
 
 ---
 
@@ -24,7 +24,7 @@ Defined in: [ephemerides.ts:52](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **EarthMoonBarycenter**: `13`
 
-Defined in: [ephemerides.ts:62](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L62)
+Defined in: [ephemerides.ts:62](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L62)
 
 ---
 
@@ -32,7 +32,7 @@ Defined in: [ephemerides.ts:62](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Jupiter**: `5`
 
-Defined in: [ephemerides.ts:54](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L54)
+Defined in: [ephemerides.ts:54](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L54)
 
 ---
 
@@ -40,7 +40,7 @@ Defined in: [ephemerides.ts:54](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Librations**: `15`
 
-Defined in: [ephemerides.ts:64](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L64)
+Defined in: [ephemerides.ts:64](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L64)
 
 ---
 
@@ -48,7 +48,7 @@ Defined in: [ephemerides.ts:64](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Mantle**: `16`
 
-Defined in: [ephemerides.ts:65](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L65)
+Defined in: [ephemerides.ts:65](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L65)
 
 ---
 
@@ -56,7 +56,7 @@ Defined in: [ephemerides.ts:65](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Mars**: `4`
 
-Defined in: [ephemerides.ts:53](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L53)
+Defined in: [ephemerides.ts:53](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L53)
 
 ---
 
@@ -64,7 +64,7 @@ Defined in: [ephemerides.ts:53](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Mercury**: `1`
 
-Defined in: [ephemerides.ts:50](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L50)
+Defined in: [ephemerides.ts:50](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L50)
 
 ---
 
@@ -72,7 +72,7 @@ Defined in: [ephemerides.ts:50](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Moon**: `10`
 
-Defined in: [ephemerides.ts:59](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L59)
+Defined in: [ephemerides.ts:59](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L59)
 
 ---
 
@@ -80,7 +80,7 @@ Defined in: [ephemerides.ts:59](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Neptune**: `8`
 
-Defined in: [ephemerides.ts:57](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L57)
+Defined in: [ephemerides.ts:57](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L57)
 
 ---
 
@@ -88,7 +88,7 @@ Defined in: [ephemerides.ts:57](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Nutations**: `14`
 
-Defined in: [ephemerides.ts:63](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L63)
+Defined in: [ephemerides.ts:63](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L63)
 
 ---
 
@@ -96,7 +96,7 @@ Defined in: [ephemerides.ts:63](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Pluto**: `9`
 
-Defined in: [ephemerides.ts:58](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L58)
+Defined in: [ephemerides.ts:58](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L58)
 
 ---
 
@@ -104,7 +104,7 @@ Defined in: [ephemerides.ts:58](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Saturn**: `6`
 
-Defined in: [ephemerides.ts:55](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L55)
+Defined in: [ephemerides.ts:55](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L55)
 
 ---
 
@@ -112,7 +112,7 @@ Defined in: [ephemerides.ts:55](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **SolarSystemBarycenter**: `12`
 
-Defined in: [ephemerides.ts:61](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L61)
+Defined in: [ephemerides.ts:61](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L61)
 
 ---
 
@@ -120,7 +120,7 @@ Defined in: [ephemerides.ts:61](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Sun**: `11`
 
-Defined in: [ephemerides.ts:60](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L60)
+Defined in: [ephemerides.ts:60](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L60)
 
 ---
 
@@ -128,7 +128,7 @@ Defined in: [ephemerides.ts:60](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **TTTDB**: `17`
 
-Defined in: [ephemerides.ts:66](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L66)
+Defined in: [ephemerides.ts:66](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L66)
 
 ---
 
@@ -136,7 +136,7 @@ Defined in: [ephemerides.ts:66](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Uranus**: `7`
 
-Defined in: [ephemerides.ts:56](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L56)
+Defined in: [ephemerides.ts:56](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L56)
 
 ---
 
@@ -144,4 +144,4 @@ Defined in: [ephemerides.ts:56](https://github.com/mshogren/astronomy/blob/8aeb7
 
 > **Venus**: `2`
 
-Defined in: [ephemerides.ts:51](https://github.com/mshogren/astronomy/blob/8aeb7989d20749f5235d5588c4538ceb3e9f40ba/js/ephemerides/src/ephemerides.ts#L51)
+Defined in: [ephemerides.ts:51](https://github.com/mshogren/astronomy/blob/main/js/ephemerides/src/ephemerides.ts#L51)

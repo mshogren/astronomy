@@ -5,4 +5,5 @@ module.exports = {
   entryPoints: ['src/astronomy.ts'],
   readme: 'none',
   excludePrivate: true,
+  gitRevision: '{branch}',
 };

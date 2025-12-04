@@ -5,4 +5,5 @@ module.exports = {
   entryPoints: ['src/ephemerides.ts'],
   readme: 'none',
   excludePrivate: true,
+  gitRevision: '{branch}',
 };
