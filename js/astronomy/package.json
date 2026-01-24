@@ -46,7 +46,7 @@
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsdoc": "62.4.0",
     "eslint-plugin-prettier": "5.5.5",
-    "globals": "17.0.0",
+    "globals": "17.1.0",
     "http-server": "14.1.1",
     "prettier": "3.8.1",
     "tsc-files": "1.1.4",
