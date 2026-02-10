@@ -111,7 +111,7 @@ export class Ephemerides {
     const series = await this.getSeries();
     const testData = await series.getTestData();
     const failures: TestResult[] = [];
-    let testCases: TestCase[] = [];
+    let testCases: TestCase[];
     let i = 0;
     let testCaseCount = 0;
     let testResultCount = 0;
