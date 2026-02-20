@@ -61,6 +61,6 @@
   },
   "dependencies": {
     "@tsastro/tsofa": "18.1.0",
-    "ephemerides": "1.1.2"
+    "ephemerides": "1.1.10"
   }
 }
