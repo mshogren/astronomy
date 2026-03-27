@@ -39,7 +39,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@typescript-eslint/parser": "8.57.2",
-    "@vitest/browser-webdriverio": "4.1.1",
+    "@vitest/browser-webdriverio": "4.1.2",
     "eslint": "10.1.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
@@ -57,7 +57,7 @@
     "vite": "8.0.3",
     "vite-plugin-checker": "0.12.0",
     "vite-plugin-dts": "4.5.4",
-    "vitest": "4.1.1"
+    "vitest": "4.1.2"
   },
   "dependencies": {
     "@tsastro/tsofa": "18.1.0",
