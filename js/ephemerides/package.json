@@ -43,7 +43,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@types/jsdom": "28.0.1",
-    "@typescript-eslint/parser": "8.58.1",
+    "@typescript-eslint/parser": "8.58.2",
     "@vitest/browser-webdriverio": "4.1.4",
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",
@@ -58,7 +58,7 @@
     "typedoc": "0.28.19",
     "typedoc-plugin-markdown": "4.11.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.58.1",
+    "typescript-eslint": "8.58.2",
     "vite": "8.0.8",
     "vite-plugin-checker": "0.12.0",
     "vite-plugin-dts": "4.5.4",
