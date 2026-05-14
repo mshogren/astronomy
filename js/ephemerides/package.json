@@ -44,7 +44,7 @@
     "@eslint/js": "10.0.1",
     "@types/jsdom": "28.0.3",
     "@typescript-eslint/parser": "8.59.3",
-    "@vitest/browser-webdriverio": "4.1.5",
+    "@vitest/browser-webdriverio": "4.1.6",
     "eslint": "10.3.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
@@ -62,7 +62,7 @@
     "vite": "8.0.12",
     "vite-plugin-checker": "0.13.0",
     "vite-plugin-dts": "4.5.4",
-    "vitest": "4.1.5"
+    "vitest": "4.1.6"
   },
   "dependencies": {
     "jsdom": "29.1.1"
