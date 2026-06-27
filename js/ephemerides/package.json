@@ -45,7 +45,7 @@
     "@types/jsdom": "28.0.3",
     "@typescript-eslint/parser": "8.62.0",
     "@vitest/browser-webdriverio": "4.1.9",
-    "eslint": "10.5.0",
+    "eslint": "10.6.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-import": "2.32.0",
