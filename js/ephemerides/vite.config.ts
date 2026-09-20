@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
   return {
     build: {
       lib: {
-        entry: resolve(__dirname, 'src/ephemerides.ts'),
+        entry: resolve(import.meta.dirname, 'src/ephemerides.ts'),
         fileName: 'ephemerides',
         name: 'ephemerides',
       },

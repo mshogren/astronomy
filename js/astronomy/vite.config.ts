@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
   return {
     build: {
       lib: {
-        entry: resolve(__dirname, 'src/astronomy.ts'),
+        entry: resolve(import.meta.dirname, 'src/astronomy.ts'),
         fileName: 'astronomy',
         name: 'astronomy',
       },
@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        ephemerides: resolve(__dirname, '../ephemerides/src/ephemerides.ts'),
+        ephemerides: resolve(import.meta.dirname, '../ephemerides/src/ephemerides.ts'),
       },
     },
   } as UserConfig;
