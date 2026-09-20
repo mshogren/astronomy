@@ -1,6 +1,6 @@
 {
   "name": "ephemerides",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "",
   "type": "module",
   "scripts": {
@@ -42,7 +42,7 @@
   "homepage": "https://github.com/mshogren/astronomy/tree/main/js/ephemerides#readme",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/jsdom": "28.0.3",
+    "@types/jsdom": "30.0.0",
     "@typescript-eslint/parser": "8.70.0",
     "@vitest/browser-webdriverio": "5.0.0",
     "eslint": "10.10.0",
@@ -53,10 +53,10 @@
     "eslint-plugin-prettier": "5.5.6",
     "globals": "17.12.0",
     "http-server": "14.1.1",
-    "prettier": "3.9.6",
+    "prettier": "3.9.8",
     "tsc-files": "1.1.4",
     "typedoc": "0.28.20",
-    "typedoc-plugin-markdown": "4.13.0",
+    "typedoc-plugin-markdown": "4.13.1",
     "typescript": "6.0.3",
     "typescript-eslint": "8.70.0",
     "vite": "8.3.0",
@@ -65,6 +65,6 @@
     "vitest": "5.0.1"
   },
   "dependencies": {
-    "jsdom": "29.1.1"
+    "jsdom": "30.1.0"
   }
 }
