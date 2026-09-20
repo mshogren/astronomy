@@ -3,13 +3,13 @@ import { builtinModules } from 'module';
 import { resolve } from 'path';
 import { defineConfig, UserConfig } from 'vite';
 import checker from 'vite-plugin-checker';
-import dts from 'vite-plugin-dts';
+import dts from 'unplugin-dts/vite';
 
 export default defineConfig(({ mode }) => {
   return {
     build: {
       lib: {
-        entry: resolve(__dirname, 'src/astronomy.ts'),
+        entry: resolve(import.meta.dirname, 'src/astronomy.ts'),
         fileName: 'astronomy',
         name: 'astronomy',
       },
@@ -28,11 +28,11 @@ export default defineConfig(({ mode }) => {
             lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
           },
         }),
-      dts({ rollupTypes: true }),
+      dts({ bundleTypes: true }),
     ],
     resolve: {
       alias: {
-        ephemerides: resolve(__dirname, '../ephemerides/src/ephemerides.ts'),
+        ephemerides: resolve(import.meta.dirname, '../ephemerides/src/ephemerides.ts'),
       },
     },
   } as UserConfig;
