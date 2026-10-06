@@ -29,10 +29,8 @@ export default defineConfig(({ mode }) => {
         ],
       },
       globals: true,
-      poolOptions: {
-        threads: {
-          singleThread: true,
-        },
+      threads: {
+        singleThread: true,
       },
     },
     plugins: [
