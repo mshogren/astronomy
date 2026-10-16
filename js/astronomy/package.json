@@ -40,7 +40,7 @@
     "@eslint/js": "10.0.1",
     "@microsoft/api-extractor": "7.59.4",
     "@typescript-eslint/parser": "8.71.2",
-    "@vitest/browser": "5.0.4",
+    "@vitest/browser": "5.0.5",
     "@vitest/browser-webdriverio": "5.0.0",
     "eslint": "10.12.0",
     "eslint-config-prettier": "10.1.8",
@@ -59,7 +59,7 @@
     "unplugin-dts": "1.1.2",
     "vite": "8.3.4",
     "vite-plugin-checker": "0.14.5",
-    "vitest": "5.0.4"
+    "vitest": "5.0.5"
   },
   "dependencies": {
     "@tsastro/tsofa": "18.1.0",
