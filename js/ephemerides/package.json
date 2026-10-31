@@ -42,7 +42,7 @@
   "homepage": "https://github.com/mshogren/astronomy/tree/main/js/ephemerides#readme",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@microsoft/api-extractor": "7.60.0",
+    "@microsoft/api-extractor": "7.60.1",
     "@types/jsdom": "30.0.0",
     "@typescript-eslint/parser": "8.72.1",
     "@vitest/browser": "5.0.5",
