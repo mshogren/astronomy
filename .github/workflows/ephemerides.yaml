@@ -45,31 +45,32 @@ jobs:
       - name: compile
         run: npm -w js/ephemerides run build
 
-      - name: Conventional Changelog Action
-        id: changelog
+      - name: Semantic Release
+        id: semantic
         if: github.event_name == 'push'
-        uses: TriPSs/conventional-changelog-action@84dadaf2c367cb52af02737cd9c7e888807219e7 # v6
+        uses: cycjimmy/semantic-release-action@03595b5eaf44910cf239ff20904cc52d410f97d4 # v8.1.2
         with:
-          github-token: ${{ secrets.github_token }}
-          preset: "conventionalcommits"
-          git-path: "js/ephemerides"
-          tag-prefix: "ephemerides@v"
-          version-file: "js/ephemerides/package.json"
-          output-file: "false"
+          extra-plugins: |
+            @semantic-release/git
+          extends: |
+            semantic-release-monorepo
+          working_directory: js/ephemerides
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
 
       - name: Create Release
         uses: comnoco/create-release-action@7dea6dc82ac9d97ced7a764aa82811451bba80e0 # v2.0.5
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
+          tag_name: steps.semantic.outputs.new_release_git_tag
+          release_name: steps.semantic.outputs.new_release_git_tag
           body: |
-            ${{ steps.changelog.outputs.clean_changelog }}
+            ${{ steps.semantic.outputs.new_release_notes }}
 
       - name: publish
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        if: steps.semantic.outputs.new_release_published == 'true'
         run: npm -w js/ephemerides publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
