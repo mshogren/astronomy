@@ -43,7 +43,7 @@
     "@vitest/browser": "5.1.2",
     "@vitest/browser-webdriverio": "5.0.0",
     "eslint": "10.15.0",
-    "eslint-config-prettier": "10.1.8",
+    "eslint-config-prettier": "10.1.9",
     "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsdoc": "65.5.6",
