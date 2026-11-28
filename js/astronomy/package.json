@@ -38,7 +38,7 @@
   "homepage": "https://github.com/mshogren/astronomy/tree/main/js/astronomy#readme",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@microsoft/api-extractor": "7.60.1",
+    "@microsoft/api-extractor": "7.60.2",
     "@typescript-eslint/parser": "8.74.0",
     "@vitest/browser": "5.1.2",
     "@vitest/browser-webdriverio": "5.0.0",
